@@ -31,7 +31,8 @@ function horsey (el, options = {}) {
     blankSearch,
     appendTo,
     anchor,
-    debounce
+    debounce,
+    autoHideOnBlur
   } = options;
   const caching = options.cache !== false;
   if (!source) {
@@ -69,6 +70,7 @@ function horsey (el, options = {}) {
     noMatchesText: options.noMatches,
     blankSearch,
     debounce,
+    autoHideOnBlur,
     set (s) {
       if (setAppends !== true) {
         el.value = '';
@@ -171,7 +173,6 @@ function autocomplete (el, options = {}) {
   let lastPrefix = '';
   const debounceTime = o.debounce || 300;
   const debouncedLoading = debounce(loading, debounceTime);
-
   if (o.autoHideOnBlur === void 0) { o.autoHideOnBlur = true; }
   if (o.autoHideOnClick === void 0) { o.autoHideOnClick = true; }
   if (o.autoShowOnUpDown === void 0) { o.autoShowOnUpDown = el.tagName === 'INPUT'; }
@@ -200,6 +201,7 @@ function autocomplete (el, options = {}) {
     defaultSetter,
     retarget,
     attachment,
+    move,
     source: []
   });
 

@@ -58,7 +58,8 @@ function horsey(el) {
       blankSearch = options.blankSearch,
       appendTo = options.appendTo,
       anchor = options.anchor,
-      debounce = options.debounce;
+      debounce = options.debounce,
+      autoHideOnBlur = options.autoHideOnBlur;
 
   var caching = options.cache !== false;
   if (!source) {
@@ -96,6 +97,7 @@ function horsey(el) {
     noMatchesText: options.noMatches,
     blankSearch: blankSearch,
     debounce: debounce,
+    autoHideOnBlur: autoHideOnBlur,
     set: function set(s) {
       if (setAppends !== true) {
         el.value = '';
@@ -206,7 +208,6 @@ function autocomplete(el) {
   var lastPrefix = '';
   var debounceTime = o.debounce || 300;
   var debouncedLoading = (0, _debounce2.default)(loading, debounceTime);
-
   if (o.autoHideOnBlur === void 0) {
     o.autoHideOnBlur = true;
   }
@@ -241,6 +242,7 @@ function autocomplete(el) {
     defaultSetter: defaultSetter,
     retarget: retarget,
     attachment: attachment,
+    move: move,
     source: []
   });
 
