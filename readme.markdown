@@ -203,13 +203,14 @@ Method called whenever we have an `anchor` and we need to filter a suggestion fo
 
 # Events
 
-Once you've instantiated a `horsey`, some propietary synthetic events will be emitted on the provided `el`.
+Once you've instantiated a `horsey`, some proprietary synthetic events will be emitted on the provided `el`.
 
-Name              | Description
-------------------|---------------------------------------------------------------
-`horsey-show`     | Fired whenever the autocomplete list is displayed
-`horsey-hide`     | Fired whenever the autocomplete list is hidden
-`horsey-filter`   | Fired whenever the autocomplete list is about to be filtered. Useful to prime the filter method
+Name                   | Description
+-----------------------|---------------------------------------------------------------
+`horsey-show`          | Fired whenever the autocomplete list is displayed
+`horsey-hide`          | Fired whenever the autocomplete list is hidden
+`horsey-filter`        | Fired whenever the autocomplete list is about to be filtered. Useful to prime the filter method
+`horsey-li-selected`   | Fired when a list item / suggestion is selected (but not chosen). `event.detail.selected` is the list item.
 
 ## Usage with [woofmark][7]
 
