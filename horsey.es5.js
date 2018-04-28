@@ -608,6 +608,8 @@ function autocomplete(el) {
 
     if (hidden(li)) {
       move(up, moves ? moves + 1 : 1);
+    } else {
+      _crossvent2.default.fabricate(attachment, 'horsey-li-selected', { selected: li });
     }
 
     function findCategory(el) {
