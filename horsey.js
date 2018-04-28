@@ -345,6 +345,8 @@ function autocomplete (el, options = {}) {
         show();
         filtering();
       }
+
+      crossvent.fabricate(el, 'horsey-selected', {selected: suggestion});
     }
 
     function filterItem () {

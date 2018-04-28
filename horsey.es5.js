@@ -392,6 +392,8 @@ function autocomplete(el) {
         show();
         filtering();
       }
+
+      _crossvent2.default.fabricate(el, 'horsey-selected', { selected: suggestion });
     }
 
     function filterItem() {
