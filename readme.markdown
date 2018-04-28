@@ -1,5 +1,15 @@
 # Horsey
 
+Hello there! This fork includes the following additions:
+
+- [IE support again](https://github.com/srt4rulez/horsey/pull/3).
+- [Added `move` to API, and allowing toggling of `autoHideOnBlur`](https://github.com/srt4rulez/horsey/pull/4).
+- [Dispatch event for suggestion/li selected](https://github.com/srt4rulez/horsey/pull/5).
+
+Original readme below (with added features from above):
+
+---
+
 > Progressive and customizable autocomplete component
 
 Browser support includes every sane browser and **IE9+**.
@@ -124,6 +134,10 @@ If set to `false`, horsey will not hide itself when the input loses focus. Defau
 # API
 
 Once you've instantiated a `horsey`, you can do a few more things with it.
+
+## `.move(up, moves)`
+
+If `up` is `true`, will select the previous suggestion in list. If `false`, will select the next suggestion in the list.
 
 ## `.clear()`
 
